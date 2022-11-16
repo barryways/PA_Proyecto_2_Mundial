@@ -35,10 +35,10 @@
     <ClInclude Include="AlbumReader.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="LinkedList.h">
+    <ClInclude Include="List.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="List.h">
+    <ClInclude Include="LinkedList.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
@@ -61,10 +61,10 @@
     <ClCompile Include="AlbumReader.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="LinkedList.cpp">
+    <ClCompile Include="List.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="List.cpp">
+    <ClCompile Include="LinkedList.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

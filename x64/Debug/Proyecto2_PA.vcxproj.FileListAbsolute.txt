@@ -1,0 +1,2 @@
+C:\Users\cdbarrientos\source\PA_Proyecto_2_Mundial\x64\Debug\Proyecto2_PA.vcxproj.AssemblyReference.cache
+C:\Users\cdbarrientos\source\PA_Proyecto_2_Mundial\x64\Debug\Proyecto2_PA.exe

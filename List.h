@@ -1,9 +1,11 @@
 #pragma once
+#include <iostream>
 #include <functional>
+
 template <typename T>
-ref class List
-{
+class List {
 public:
+
     virtual int get_size() = 0;
 
     virtual bool is_empty() = 0;
@@ -19,5 +21,6 @@ public:
     virtual T* get(int index) = 0;
 
     virtual T* remove(int index) = 0;
-};
 
+    virtual void for_each(void (*action)(T*)) = 0;
+};

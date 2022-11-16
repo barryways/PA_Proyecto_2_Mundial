@@ -1,8 +1,9 @@
 #pragma once
 #include "List.h"
-
+#include <iostream>
 template <typename T>
-ref class LinkedList: public List<T>
+
+class LinkedList :public List<T>
 {
 private:
 
@@ -18,121 +19,6 @@ private:
 
 	Node* head;
 	Node* tail;
-
-	class LinkedListIterator : public Iterator<T> {
-		Node* current;
-
-		virtual Iterator<T>* next() {
-			current = current->next;
-			return this;
-		}
-
-		virtual T* value() {
-			return current->item;
-		}
-
-		virtual bool has_next() {
-			return current != nullptr;
-		}
-
-	public:
-
-		LinkedListIterator(LinkedList* list) {
-			current = list->head;
-		}
-	};
-
-	Node* find_node_n(Node* head, int n) {
-		Node* slow = head;
-		Node* fast = head ? head->next : nullptr;
-
-		int i = 1;
-
-		while (i < n && slow && fast) {
-			slow = slow->next ? slow->next->next : nullptr;
-			fast = fast->next ? fast->next->next : nullptr;
-			i = i + 2;
-		}
-
-		if (n % 2 == 0) {
-			return slow;
-		}
-
-		return fast;
-	}
-
-	Node* merge_sort(Node* head, int length, Comparator<T>* comparator) {
-		if (length < 2) {
-			return head;
-		}
-
-		int left_length = length / 2;
-		int right_length = left_length + (length % 2);
-
-		Node* left = head;
-		Node* right = find_node_n(head, left_length);
-
-		left = merge_sort(left, left_length, comparator);
-		right = merge_sort(right, right_length, comparator);
-
-		int i = 0;
-		int j = 0;
-
-		Node** iterator = &head;
-
-		while (i < left_length && j < right_length) {
-			if (comparator->compare(left->item, right->item) > 0) {
-				*iterator = left;
-				left = left->next;
-				i++;
-			}
-			else {
-				*iterator = right;
-				right = right->next;
-				j++;
-			}
-
-			iterator = &((*iterator)->next);
-		}
-
-		while (i < left_length) {
-			*iterator = left;
-			left = left->next;
-			this->tail = *iterator;
-			iterator = &((*iterator)->next);
-			i++;
-		}
-
-		while (j < right_length) {
-			*iterator = right;
-			right = right->next;
-			this->tail = *iterator;
-			iterator = &((*iterator)->next);
-			j++;
-		}
-
-		*iterator = nullptr;
-
-		return head;
-	}
-
-	Node* binary_search(Node* head, Node* middle, int size, std::function<int(T*)> compare) {
-		if (!size && compare(head->item) != 0) {
-			return nullptr;
-		}
-
-		int comparison = compare(middle->item);
-
-		if (comparison == 0) {
-			return middle;
-		}
-
-		if (comparison > 0) {
-			return binary_search(middle, find_node_n(middle, size / 2), size / 2, compare);
-		}
-
-		return binary_search(head, find_node_n(head, size / 2), size / 2, compare);
-	}
 
 public:
 
@@ -236,10 +122,6 @@ public:
 		return item;
 	}
 
-	virtual Iterator<T>* iterator() {
-		return new LinkedListIterator(this);
-	}
-
 	virtual void for_each(void (*action)(T*)) {
 		Node* iterator = this->head;
 
@@ -248,5 +130,5 @@ public:
 			iterator = iterator->next;
 		}
 	}
-};
 
+};
