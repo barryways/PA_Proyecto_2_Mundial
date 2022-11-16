@@ -1,4 +1,4 @@
 ﻿  Proyecto2_PA.cpp
 C:\Users\cdbarrientos\source\PA_Proyecto_2_Mundial\AlbumReader.h(23,1): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\cdbarrientos\source\PA_Proyecto_2_Mundial\Proyecto2_PA.cpp(40): error C4716: 'manejo_estadisticas': debe devolver un valor
-C:\Users\cdbarrientos\source\PA_Proyecto_2_Mundial\Proyecto2_PA.cpp(63): error C4716: 'manejo_marcaciones_estampillas': debe devolver un valor
+  AlbumReader.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+  Proyecto2_PA.vcxproj -> C:\Users\cdbarrientos\source\PA_Proyecto_2_Mundial\x64\Debug\Proyecto2_PA.exe

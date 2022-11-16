@@ -62,8 +62,33 @@ void manejo_marcaciones_estampillas() {
     } while (opcion_manejo_estampillas == 0);
 }
 
+void print_stickers(Sticker* sticker) {
+    string repeated = sticker->is_repeated() ? "true" : "false";
+    cout << sticker->get_category()->get_name() << "," << sticker->get_code() << "," << sticker->get_name() << "," << repeated << "," << sticker->get_appeareances()<<"\r\n";
+}
 
-void manejo_CSV() {
+string stickers_for_csv(Sticker* sticker) {
+    string repeated = sticker->is_repeated() ? "true" : "false";
+    return sticker->get_category()->get_name() + "," + sticker->get_code() + "," + sticker->get_name() + "," + repeated + "," + to_string(sticker->get_appeareances()) + "\r\n";
+}
+
+void escribir_archivo(List<Sticker>* stickers,Sticker* sticker) {
+
+    ofstream archivo;
+    string nombre_archivo="";
+    archivo.open("albumCreado.csv", ios::out);
+    if (archivo.fail())
+    {
+        cout << "No se pudo abrir el archivo";
+        exit(1);
+    }
+    //string contenido= ;
+   // archivo << contenido;
+        archivo.close();
+}
+
+
+void manejo_CSV(List<Sticker>* stickers) {
     int opcion_manejo_csv = 0;
     cout << "Usted entro a: IMPORTAR O EXPORTAR ESTAMPILLAS\n\r";
     do
@@ -73,6 +98,9 @@ void manejo_CSV() {
         switch (opcion_manejo_csv)
         {
         case 1:
+
+            //string archivote =stickers->for_each(stickers_for_csv());
+            //escribir_archivo();
             break;
         case 2:
             break;
@@ -88,9 +116,8 @@ void manejo_CSV() {
 
 int main()
 {
-    //inicializacion de clases
-    AlbumReader* panini_2022 = new AlbumReader();
-    List<std::string>* lista = new LinkedList<std::string>();
+    //llamada de la lista
+    List<Sticker>* stickers = AlbumReader::read_album("album.csv");
     //incializacion de variables
     int opcion_menu_principal = 0;
 
@@ -102,7 +129,7 @@ int main()
         switch (opcion_menu_principal)
         {
         case 1:
-            manejo_CSV();
+            manejo_CSV(stickers);
             break;
         case 2:
             manejo_marcaciones_estampillas();
