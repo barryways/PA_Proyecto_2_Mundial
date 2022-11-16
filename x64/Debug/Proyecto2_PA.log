@@ -1,15 +1,4 @@
-﻿  AlbumReader.cpp
+﻿  Proyecto2_PA.cpp
 C:\Users\cdbarrientos\source\PA_Proyecto_2_Mundial\AlbumReader.h(23,1): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
-  LinkedList.cpp
-  List.cpp
-  Proyecto2_PA.cpp
-C:\Users\cdbarrientos\source\PA_Proyecto_2_Mundial\Proyecto2_PA.cpp(11,58): error C2440: 'inicializando': no se puede realizar la conversión de 'LinkedList<std::string> *' a 'List<System::String ^> *'
-C:\Users\cdbarrientos\source\PA_Proyecto_2_Mundial\Proyecto2_PA.cpp(11,27): message : Los tipos señalados no están relacionados; la conversión requiere reinterpret_cast, conversión de estilo de C o conversión de estilo de función
-C:\Users\cdbarrientos\source\PA_Proyecto_2_Mundial\Proyecto2_PA.cpp(17,28): error C2664: 'void List<System::String ^>::add(T *)': el argumento 1 no puede convertirse de 'const char [10]' a 'T *'
-          with
-          [
-              T=System::String ^
-          ]
-C:\Users\cdbarrientos\source\PA_Proyecto_2_Mundial\Proyecto2_PA.cpp(17,17): message : Los tipos señalados no están relacionados; la conversión requiere reinterpret_cast, conversión de estilo de C o conversión de estilo de función
-C:\Users\cdbarrientos\source\PA_Proyecto_2_Mundial\List.h(17,18): message : vea la declaración de 'List<System::String ^>::add'
-  Generando código...
+  AlbumReader.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+  Proyecto2_PA.vcxproj -> C:\Users\cdbarrientos\source\PA_Proyecto_2_Mundial\x64\Debug\Proyecto2_PA.exe
