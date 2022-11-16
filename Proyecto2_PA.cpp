@@ -15,7 +15,7 @@ void marshal_string(String^ s, string& os) {
     Marshal::FreeHGlobal(IntPtr((void*)chars));
 }
 
-int manejo_estadisticas() {
+void manejo_estadisticas() {
     int opcion_manejo_estampillas = 0;
     cout << "Usted entro a: ESTADISTICAS\n\r";
     do
@@ -40,7 +40,7 @@ int manejo_estadisticas() {
 }
 
 
-int manejo_marcaciones_estampillas() {
+void manejo_marcaciones_estampillas() {
     int opcion_manejo_estampillas = 0;
     cout << "Usted entro a: MARCAR O DESMARCAR ESTAMPILLAS\n\r";
     do
