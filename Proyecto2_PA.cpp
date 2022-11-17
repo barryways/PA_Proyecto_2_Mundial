@@ -66,13 +66,12 @@ void print_stickers(Sticker* sticker) {
     string repeated = sticker->is_repeated() ? "true" : "false";
     cout << sticker->get_category()->get_name() << "," << sticker->get_code() << "," << sticker->get_name() << "," << repeated << "," << sticker->get_appeareances()<<"\r\n";
 }
-
-string stickers_for_csv(Sticker* sticker) {
+void print_stickers(Sticker* sticker) {
     string repeated = sticker->is_repeated() ? "true" : "false";
-    return sticker->get_category()->get_name() + "," + sticker->get_code() + "," + sticker->get_name() + "," + repeated + "," + to_string(sticker->get_appeareances()) + "\r\n";
+    cout << sticker->get_category()->get_name() << "," << sticker->get_code() << "," << sticker->get_name() << "," << repeated << "," << sticker->get_appeareances() << "\r\n";
 }
 
-void escribir_archivo(List<Sticker>* stickers,Sticker* sticker) {
+void escribir_archivo(Sticker* sticker) {
 
     ofstream archivo;
     string nombre_archivo="";
@@ -82,9 +81,10 @@ void escribir_archivo(List<Sticker>* stickers,Sticker* sticker) {
         cout << "No se pudo abrir el archivo";
         exit(1);
     }
-    //string contenido= ;
-   // archivo << contenido;
-        archivo.close();
+    string repeated = sticker->is_repeated() ? "true" : "false";
+    archivo<<sticker->get_category()->get_name() + "," + sticker->get_code() + "," + sticker->get_name() + "," + repeated + "," + to_string(sticker->get_appeareances()) + "\r\n";
+   
+    archivo.close();
 }
 
 
@@ -98,8 +98,7 @@ void manejo_CSV(List<Sticker>* stickers) {
         switch (opcion_manejo_csv)
         {
         case 1:
-
-            //string archivote =stickers->for_each(stickers_for_csv());
+            string contenido_csv = stickers->for_each_funcion(print_stickers());
             //escribir_archivo();
             break;
         case 2:

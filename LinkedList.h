@@ -130,5 +130,13 @@ public:
 			iterator = iterator->next;
 		}
 	}
+	virtual void for_each_funcion(string (*action)(T*)) {
+		Node* iterator = this->head;
 
+		while (iterator != nullptr) {
+			action(iterator->item);
+			iterator = iterator->next;
+		}
+		return iterator->item;
+	}
 };
