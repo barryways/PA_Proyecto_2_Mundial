@@ -24,6 +24,4 @@ public:
 
     virtual void for_each(void (*action)(T*)) = 0;
 
-    virtual void for_each_funcion(string (*action)(T*)) = 0;//funcion
-
 };

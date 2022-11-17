@@ -30,7 +30,7 @@ public:
     int get_number()
     {
         return this->number;
-    }
+    }   
 
     string get_code()
     {
@@ -41,7 +41,6 @@ public:
     {
         return this->name;
     }
-
     Category* get_category() {
         return this->category;
     }
