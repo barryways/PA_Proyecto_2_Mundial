@@ -1,5 +1,6 @@
 ﻿  Proyecto2_PA.cpp
-C:\Users\cdbarrientos\source\PA_Proyecto_2_Mundial\AlbumReader.h(23,1): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\cdbarrientos\source\PA_Proyecto_2_Mundial\Proyecto2_PA.cpp(30): warning C4715: '`anonymous namespace'::search': no todas las rutas de acceso de control devuelven un valor
-  AlbumReader.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
-  Proyecto2_PA.vcxproj -> C:\Users\cdbarrientos\source\PA_Proyecto_2_Mundial\x64\Debug\Proyecto2_PA.exe
+C:\xampp\htdocs\HBlogs\PA_Proyecto_2_Mundial\AlbumReader.h(23,1): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\xampp\htdocs\HBlogs\PA_Proyecto_2_Mundial\Proyecto2_PA.cpp(30): warning C4715: '`anonymous namespace'::search': not all control paths return a value
+C:\xampp\htdocs\HBlogs\PA_Proyecto_2_Mundial\Proyecto2_PA.cpp(49): warning C4715: '`anonymous namespace'::search_by_name': not all control paths return a value
+  AlbumReader.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Proyecto2_PA.vcxproj -> C:\xampp\htdocs\HBlogs\PA_Proyecto_2_Mundial\x64\Debug\Proyecto2_PA.exe
